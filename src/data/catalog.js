@@ -1,12 +1,3 @@
-/* =========================================================
-   Data katalog untuk halaman indeks.
-   Ini terpisah dari ESSAYS (essays.js) karena berisi metadata
-   tampilan daftar: status filter, nomor tampil, dan excerpt.
-
-   Tambahkan esai baru dengan menambah entri baru di sini,
-   DAN menambahkan entrinya juga di essays.js (src/data/essays.js).
-   ========================================================= */
-
 export const CATALOG = [
   {
     slug: "paprika-a-beautiful-terrifying-dream",

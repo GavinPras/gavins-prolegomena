@@ -1,10 +1,3 @@
-/* =========================================================
-   Data esai.
-   Tambahkan esai baru cukup dengan menambah entri baru
-   di object ESSAYS, lalu tambahkan juga item <li> yang
-   sesuai di index.html supaya muncul di daftar.
-   ========================================================= */
-
 export const ESSAYS = {
 
   "what-if-life-could-be-sold": {

@@ -1,7 +1,3 @@
-// Menggantikan formatInline() dari essay.js asli.
-// Karena di sini kita berada di dalam React (bukan menyuntik innerHTML
-// secara manual), escaping HTML otomatis ditangani oleh React saat kita
-// merender teks biasa. Fungsi ini hanya menangani markup ringan:
 // **bold**, *italic*, dan [br] / \n untuk baris baru.
 
 function escapeHtml(str) {
@@ -13,11 +9,6 @@ function escapeHtml(str) {
     .replace(/'/g, "&#39;");
 }
 
-/**
- * formatInline: bold + italic, hasil berupa HTML string aman
- * (input sudah di-escape dulu sebelum markup ditambahkan,
- * sama seperti escapeHtml(str) -> regex replace di versi asli).
- */
 export function formatInline(str) {
   if (!str) return "";
   let escaped = escapeHtml(str);
@@ -26,10 +17,6 @@ export function formatInline(str) {
   return escaped;
 }
 
-/**
- * formatQuote: sama seperti formatInline, tapi juga mengubah
- * newline dan token [br] menjadi <br>.
- */
 export function formatQuote(str) {
   if (!str) return "";
   let formatted = formatInline(str);

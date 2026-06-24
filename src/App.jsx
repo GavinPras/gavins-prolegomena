@@ -9,7 +9,7 @@ export default function App() {
       <Route path="/" element={<IndexPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/essay" element={<EssayPage />} />
-      {/* Fallback: arahkan path tak dikenal ke index */}
+      {}
       <Route path="*" element={<IndexPage />} />
     </Routes>
   );
