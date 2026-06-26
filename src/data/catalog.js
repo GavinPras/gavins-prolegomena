@@ -1,5 +1,14 @@
 export const CATALOG = [
   {
+    slug: "categories-intersections", 
+    number: "05", 
+    status: "baru", 
+    statusLabel: "Ideas", 
+    title: "Why Do We Always Generalize Things?", 
+    excerptHtml: 'Philosophical Ideas of Category Intersections', 
+    date: "Jun 26, 2026"
+  },
+  {
     slug: "paprika-a-beautiful-terrifying-dream",
     number: "04",
     status: "direvisi",

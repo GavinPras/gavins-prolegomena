@@ -1,17 +1,11 @@
 import { formatInline, formatQuote } from "../utils/textFormat.js";
-
-// Menggantikan renderBlock() dari essay.js asli.
-// Setiap tipe block (img, h2, quote, list, p/string) dirender sebagai
-// komponen React, sambil tetap mendukung beberapa "typo" yang ada di
-// data asli (mis. key "tye" alih-alih "type", atau type:"P" huruf besar).
+import MathBlock from "./MathBlock.jsx";
 
 export default function EssayBlock({ block }) {
-  // Block berupa string biasa -> paragraf
   if (typeof block === "string") {
     return <p dangerouslySetInnerHTML={{ __html: formatQuote(block) }} />;
   }
 
-  // Normalisasi: data asli punya beberapa typo seperti `tye` dan `"P"`.
   const rawType = block.type ?? block.tye ?? "p";
   const type = String(rawType).toLowerCase();
 
@@ -56,6 +50,9 @@ export default function EssayBlock({ block }) {
         </Tag>
       );
     }
+
+    case "math":
+    return <MathBlock formula={block.formula} display={block.display !== false} />;
 
     case "p":
     default:

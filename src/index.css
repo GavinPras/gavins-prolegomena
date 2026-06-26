@@ -489,6 +489,15 @@ ul.essay-list li::before {
   margin: var(--s4) 0;
 }
 
+.essay-math {
+  margin: var(--s3) 0;
+  overflow-x: auto;
+}
+
+.essay-math-inline {
+  margin: 0 0.15em;
+}
+
 .related {
   margin-top: var(--s5);
 }
