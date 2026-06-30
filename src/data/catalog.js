@@ -1,11 +1,20 @@
 export const CATALOG = [
   {
+    slug: "why-love-cant-be-defined-by-love-itself", 
+    number: "06", 
+    status: "mengendap", 
+    statusLabel: "Reflections", 
+    title: "Why Love Cannot Be Defined by Love Itself ", 
+    excerptHtml: "Philosphical reflections on <em>love</em>.",
+    date: "Jun 30, 2026"
+  },
+  {
     slug: "categories-intersections", 
     number: "05", 
     status: "baru", 
     statusLabel: "Ideas", 
     title: "Why Do We Always Generalize Things?", 
-    excerptHtml: 'Philosophical Ideas of Category Intersections', 
+    excerptHtml: 'Philosophical ideas of <em>Category Intersections</em>.', 
     date: "Jun 26, 2026"
   },
   {
