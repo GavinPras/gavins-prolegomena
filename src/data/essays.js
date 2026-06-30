@@ -419,6 +419,7 @@ export const ESSAYS = {
   "why-love-cant-be-defined-by-love-itself": {
     title: "Why Love Cannot Be Defined by Love Itself ", 
     date: "Jun 30, 2026", 
+    order: 6,
     content: [
       {
         type: "img", 
