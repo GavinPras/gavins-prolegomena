@@ -44,7 +44,7 @@ export default function IndexPage() {
       </div>
 
       <main>
-        <ol className="catalog" id="catalog">
+        <ul className="catalog" id="catalog">
           {visibleCards.map((card) => (
             <li className="card" data-status={card.status} key={card.slug}>
               <Link className="card-link" to={`/essay?slug=${encodeURIComponent(card.slug)}`}>
@@ -71,7 +71,7 @@ export default function IndexPage() {
               </Link>
             </li>
           ))}
-        </ol>
+        </ul>
 
         {count === 0 && (
           <p className="empty-state" id="empty-state">

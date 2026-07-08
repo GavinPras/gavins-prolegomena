@@ -1,7 +1,6 @@
 export const CATALOG = [
   {
     slug: "why-love-cant-be-defined-by-love-itself", 
-    number: "06", 
     status: "mengendap", 
     statusLabel: "Reflections", 
     title: "Why Love Cannot Be Defined by Love Itself ", 
