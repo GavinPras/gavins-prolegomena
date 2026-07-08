@@ -196,10 +196,11 @@ button:focus-visible {
 
 .card-link {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
   gap: var(--s3);
-  align-items: flex-start;
   padding: var(--s3) 0;
-  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
 }
 
 .card-link:hover {
@@ -226,17 +227,45 @@ button:focus-visible {
 .card-main {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  min-width: 0;
+  justify-content: space-between;
+  gap: 0.4rem;
   flex: 1 1 auto;
+  min-width: 0;
+}
+
+.card-byline {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+
+.card-cover {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+  image-rendering: auto;
+}
+
+.card-cover--empty {
+  background: var(--rule);
 }
 
 .card-title-row {
   display: flex;
   align-items: baseline;
+  justify-content: flex-start;
+  gap: var(--s2);
+}
+
+.card-bottom-row {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: var(--s2);
-  flex-wrap: wrap;
 }
 
 .card-title {
@@ -291,6 +320,13 @@ button:focus-visible {
   color: var(--ink-soft);
   padding: var(--s3) 0;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .card-cover {
+    width: 76px;
+    height: 76px;
+  }
 }
 
 /* =========================================================

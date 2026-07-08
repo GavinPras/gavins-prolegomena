@@ -48,19 +48,25 @@ export default function IndexPage() {
           {visibleCards.map((card) => (
             <li className="card" data-status={card.status} key={card.slug}>
               <Link className="card-link" to={`/essay?slug=${encodeURIComponent(card.slug)}`}>
-                <span className="card-number">{card.number}</span>
+                {card.cover ? (
+                  <img 
+                    className="card-cover" 
+                    src={card.cover} alt={card.title} 
+                    loading="lazy" 
+                    style={{ objectPosition: card.coverPosition || "center" }}
+                  />
+                ) : (
+                  <div className="card-cover card-cover--empty" />
+                )}
                 <span className="card-main">
                   <span className="card-title-row">
                     <span className="card-title">{card.title}</span>
-                    <span className={`card-stamp card-stamp--${card.status}`}>
-                      {card.statusLabel}
-                    </span>
                   </span>
-                  <span
-                    className="card-excerpt"
-                    dangerouslySetInnerHTML={{ __html: card.excerptHtml }}
-                  />
-                  <span className="card-trace">{card.date}</span>
+                  <span className="card-excerpt" dangerouslySetInnerHTML={{ __html: card.excerptHtml }} />
+                  <span className="card-bottom-row">
+                    <span className="card-trace">{card.date}</span>
+                    <span className={`card-stamp card-stamp--${card.status}`}>{card.statusLabel}</span>
+                  </span>
                 </span>
               </Link>
             </li>
