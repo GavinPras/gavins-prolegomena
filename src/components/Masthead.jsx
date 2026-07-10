@@ -25,9 +25,7 @@ export default function Masthead({ small = false, withSubtitle = false }) {
             Gavin&apos;s Prolegomena
           </Link>
           <p className="masthead-sub">
-            Even though our immanent language limits our transcendent thoughts, I keep writing...
-            <br />
-            After all, what else can I do?
+            A personal archive of writings. 
           </p>
         </div>
       ) : (

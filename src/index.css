@@ -13,7 +13,7 @@
   --font-serif: "Iowan Old Style", "Palatino Linotype", "Palatino", Georgia, "Charter", serif;
   --font-mono: "SF Mono", "IBM Plex Mono", "Courier New", monospace;
 
-  --measure: 42rem;
+  --measure: 72rem;
   --s1: 0.5rem;
   --s2: 1rem;
   --s3: 1.75rem;
@@ -231,7 +231,7 @@ button:focus-visible {
 
 .card-cover {
   width: 100%;
-  height: 180px;
+  height: 280px;
   object-fit: cover;
   border-radius: 2px;
 }
@@ -306,6 +306,15 @@ button:focus-visible {
   color: var(--ink-soft);
   padding: var(--s3) 0;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-cover {
+    height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
