@@ -1,5 +1,14 @@
 export const CATALOG = [
   {
+    slug: "why-nana-feels-so-real",
+    status: "mengendap", 
+    statusLabel: "Reflections", 
+    title: "Why Nana Feels So Real", 
+    excerptHtml: "Philosophical Reflections on <em>Nana</em>",
+    date: "Jul 20, 2026", 
+    cover: "/images/why-nana-feels-so-real/cover.png"
+  },
+  {
     slug: "why-love-cant-be-defined-by-love-itself", 
     status: "mengendap", 
     statusLabel: "Reflections", 
